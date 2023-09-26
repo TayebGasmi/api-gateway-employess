@@ -11,7 +11,7 @@ WORKDIR /app
 COPY --from=build /app/target/api-gateway-0.0.1-SNAPSHOT.jar /app/api-gateway-0.0.1-SNAPSHOT.jar
 
 # Expose port 9000 (the port your Spring Boot application is running on)
-EXPOSE 9000
+EXPOSE 8051
 
 # Define the command to run your application
 CMD ["java", "-jar", "api-gateway-0.0.1-SNAPSHOT.jar"]
