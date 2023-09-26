@@ -8,7 +8,7 @@ RUN mvn clean package -DskipTests
 # Stage 2: Create the final Docker image
 FROM openjdk:17-jdk-slim
 WORKDIR /app
-COPY --from=build /app/target/TaskManagementService-0.0.1-SNAPSHOT.jar /app/api-gateway-0.0.1-SNAPSHOT.jar
+COPY --from=build /app/target/api-gateway-0.0.1-SNAPSHOT.jar /app/api-gateway-0.0.1-SNAPSHOT.jar
 
 # Expose port 9000 (the port your Spring Boot application is running on)
 EXPOSE 9000
