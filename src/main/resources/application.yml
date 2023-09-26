@@ -20,6 +20,14 @@
             uri: http://localhost:9000/api/skill/
             predicates:
               - Path=/api/skill/**
+          - id: task-service
+            uri: http://localhost:8085/tasks/
+            predicates:
+              - Path=/tasks/**
+          - id: sprint-service
+            uri: http://localhost:8085/sprints/
+            predicates:
+              - Path=/sprints/**
   #eurka
   eureka:
     client:
